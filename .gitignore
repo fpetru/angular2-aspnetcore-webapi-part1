@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs
+/bin/Debug/netcoreapp1.0
+/node_modules
+/obj/Debug/netcoreapp1.0
+/wwwroot
+/NotebookAppWeb.xproj.user
+/project.lock.json
