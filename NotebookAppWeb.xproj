@@ -18,6 +18,7 @@
   <ItemGroup>
     <DnxInvisibleContent Include="bower.json" />
     <DnxInvisibleContent Include=".bowerrc" />
+    <DnxInvisibleContent Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <DnxInvisibleFolder Include=".git\" />
