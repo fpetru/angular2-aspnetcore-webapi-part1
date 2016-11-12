@@ -13,7 +13,6 @@ export class NoteService {
     private headers: Headers;
 
     constructor(private _http: Http, private _configuration: Configuration) {
-
         this.actionUrl = _configuration.ServerWithApiUrl;
 
         this.headers = new Headers();
@@ -22,7 +21,7 @@ export class NoteService {
     }
 
     public getAll = (): Observable<NoteItem[]> => {
-        return this._http.get(this.actionUrl)
+        return this._http.get(this.actionUrl + "notes")
             .map((response: Response) => <NoteItem[]>response.json())
             .catch(this.handleError);
     }

@@ -6,12 +6,13 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 /* components */
 import { NotesComponent } from './components/notes/note.component';
-import { LoginService} from "./services/user/loginService";
+import { NoteService} from "./services/note/noteService";
+import { Configuration } from './app.constants';
 
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpModule, JsonpModule, ReactiveFormsModule],
     declarations: [NotesComponent],
-    providers: [LoginService],
+    providers: [NoteService, Configuration],
     bootstrap: [NotesComponent]
 })
 

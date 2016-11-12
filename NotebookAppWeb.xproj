@@ -19,6 +19,7 @@
     <DnxInvisibleContent Include="bower.json" />
     <DnxInvisibleContent Include=".bowerrc" />
     <DnxInvisibleContent Include="web.config" />
+    <DnxInvisibleContent Include="wwwroot\dist\app.constants.js" />
   </ItemGroup>
   <ItemGroup>
     <DnxInvisibleFolder Include=".git\" />
