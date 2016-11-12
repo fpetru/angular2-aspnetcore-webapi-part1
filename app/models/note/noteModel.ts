@@ -1,4 +1,4 @@
-﻿export class NoteModel {
+﻿export class NoteItem {
     constructor(
         public id: string,
         public body: string,
