@@ -1,9 +1,9 @@
 ﻿export class NoteItem {
     constructor(
-        public id: string,
-        public body: string,
-        public updatedOn: Date,
-        public createdOn: Date,
-        public userId: number)
+        public Id: string,
+        public Body: string,
+        public UpdatedOn: Date,
+        public CreatedOn: Date,
+        public UserId: number)
     { }
 }

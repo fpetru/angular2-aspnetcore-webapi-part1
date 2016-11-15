@@ -17,22 +17,18 @@ export class NotesComponent implements OnInit {
     public myItems: NoteItem[];
 
     constructor(private _dataService: NoteService) {
-        console.log("NotesComponent constructor");
     }
 
     ngOnInit() {
-        console.log("ngOnInit()");
         this.getAllItems();
     }
 
-    private getAllItems(): void {
-        console.log("getAllItems()");
-
+    public getAllItems(): void {
         this._dataService
             .getAll()
             .subscribe((data: NoteItem[]) => this.myItems = data,
                         error => console.log(error),
-                        () => console.log('Get all Items complete'));
+                        () => console.log("getAllItems() complete"));
     }
 }
 
