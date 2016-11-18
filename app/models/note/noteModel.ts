@@ -2,8 +2,9 @@
     constructor(
         public Id: string,
         public Body: string,
-        public UpdatedOn: Date,
-        public CreatedOn: Date,
-        public UserId: number)
-    { }
+        public UpdatedOn: string,
+        public CreatedOn: string,
+        public UserId: number) {
+
+    }
 }

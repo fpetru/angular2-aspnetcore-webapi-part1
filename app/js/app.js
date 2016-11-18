@@ -1,21 +1,22 @@
 +function ($) {
-  $(function(){
-  	
+  $(function(){ 	
     var $window = $(window);
     // mobile
-  	var mobile = function(option){
-  		if(option == 'reset'){
-  			$('[data-toggle^="shift"]').shift('reset');
-  			return true;
-  		}
-  		$('[data-toggle^="shift"]').shift('init');
+    var mobile = function(option) {
+        if(option === 'reset'){
+            $('[data-toggle^="shift"]').shift('reset');
+            return true;
+        }
+        $('[data-toggle^="shift"]').shift('init');
       return true;
-  	};
-  	// unmobile
-  	$window.width() < 768 && mobile();
+    };
+
+    // unmobile
+    $window.width() < 768 && mobile();
+
     // resize
     var $resize, $width = $window.width();
-  	$window.resize(function() {
+    $window.resize(function() {
       if($width !== $window.width()){
         clearTimeout($resize);
         $resize = setTimeout(function(){
@@ -25,15 +26,13 @@
           $width = $window.width();
         }, 500);
       }
-  	});
+    });
 
     // fluid layout
     var setHeight = function(){
       $('.app-fluid #nav > *').css('min-height', $(window).height());
       return true;
     }
-    setHeight();
-    
+    setHeight();  
   });
 }(jQuery);
-

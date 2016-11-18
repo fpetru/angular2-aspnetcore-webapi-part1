@@ -199,8 +199,8 @@ a:hover .caret-white {
 }
 .list-group-item.active {
   color: #fff;
-  border-color: #65bd77 !important;
-  background-color: #65bd77 !important;
+  border-color: #8aa9c9 !important;
+  background-color: #8aa9c9 !important;
 }
 .list-group-item.active .text-muted {
   color: #d0ebd6;

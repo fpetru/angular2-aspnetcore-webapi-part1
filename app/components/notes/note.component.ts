@@ -5,7 +5,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { FormGroup, FormControl, Validators, FormBuilder  } from '@angular/forms';
-import { ResponseStatus } from "../../models/common/responseStatus";
 
 @Component({
     selector: 'notes',
@@ -20,15 +19,11 @@ export class NotesComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.getAllItems();
-    }
-
-    public getAllItems(): void {
         this._dataService
             .getAll()
-            .subscribe((data: NoteItem[]) => this.myItems = data,
-                        error => console.log(error),
-                        () => console.log("getAllItems() complete"));
+            .subscribe((data: NoteItem[]) => { console.log("Message received on init: "); this.myItems = data; console.log(data[0]); },
+            error => console.log(error),
+            () => console.log("getAllItems() complete from init"));
     }
 }
 
