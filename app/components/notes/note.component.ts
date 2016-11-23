@@ -4,8 +4,6 @@ import { NoteItem } from "../../models/note/noteModel";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-import { FormGroup, FormControl, Validators, FormBuilder  } from '@angular/forms';
-
 @Component({
     selector: 'notes',
     providers: [NoteService],
@@ -21,9 +19,8 @@ export class NotesComponent implements OnInit {
     ngOnInit() {
         this._dataService
             .getAll()
-            .subscribe((data: NoteItem[]) => { console.log("Message received on init: "); this.myItems = data; console.log(data[0]); },
+            .subscribe((data: NoteItem[]) => this.myItems = data,
             error => console.log(error),
             () => console.log("getAllItems() complete from init"));
     }
 }
-

@@ -1,10 +1,7 @@
-﻿export class NoteItem {
-    constructor(
-        public Id: string,
-        public Body: string,
-        public UpdatedOn: string,
-        public CreatedOn: string,
-        public UserId: number) {
-
-    }
+﻿export interface NoteItem {
+    Id: string,
+    Body: string,
+    UpdatedOn: string,
+    CreatedOn: string,
+    UserId: number
 }
