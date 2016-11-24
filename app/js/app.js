@@ -1,7 +1,9 @@
+
 +function ($) {
   $(function(){ 	
     var $window = $(window);
-    // mobile
+
+      // mobile layout
     var mobile = function(option) {
         if(option === 'reset'){
             $('[data-toggle^="shift"]').shift('reset');
@@ -11,7 +13,7 @@
       return true;
     };
 
-    // unmobile
+    // undo mobile layout
     $window.width() < 768 && mobile();
 
     // resize
@@ -33,6 +35,7 @@
       $('.app-fluid #nav > *').css('min-height', $(window).height());
       return true;
     }
-    setHeight();  
+
+    setHeight();
   });
 }(jQuery);

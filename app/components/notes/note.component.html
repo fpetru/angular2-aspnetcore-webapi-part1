@@ -3,33 +3,25 @@
     <!-- .aside -->
     <aside class="aside-xl b-l b-r" id="note-list">
         <section class="vbox flex">
-            <header class="header clearfix">
-                <p class="h3">List of notes</p>
-            </header>
-            <section>
-                <section>
-                    <section>
-                        <div class="padder">
-                            <!-- list of note items to be displayed -->
-                            <ul id="note-items" class="list-group list-group-sp">
-                                <li class="list-group-item hover active" *ngFor="let noteItem of myItems">
-                                    <div class="view" id="note-2">
-                                        <button class="destroy close hover-action">×</button>
-                                        <div class="note-name">
-                                            <strong>
-                                                {{noteItem.Body | slice:0:20}}
-                                            </strong>
-                                        </div>
-                                        <div class="note-desc">{{noteItem.Body | slice:21:50}}</div>
-                                        <span class="text-xs text-muted">{{noteItem.UpdatedOn}}</span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <!-- list of note items to be displayed -->
+            <div class="padder">
+                <br />
+                <!-- list of note items to be displayed -->
+                <ul id="note-items" class="list-group list-group-sp">
+                    <li class="list-group-item hover active" *ngFor="let noteItem of myItems">
+                        <div class="view" id="note-2">
+                            <button class="destroy close hover-action">×</button>
+                            <div class="note-name">
+                                <strong>
+                                    {{noteItem.Body | slice:0:20}}
+                                </strong>
+                            </div>
+                            <div class="note-desc">{{noteItem.Body | slice:21:50}}</div>
+                            <span class="text-xs text-muted">{{noteItem.UpdatedOn}}</span>
                         </div>
-                    </section>
-                </section>
-            </section>
+                    </li>
+                </ul>
+                <!-- list of note items to be displayed -->
+            </div>
         </section>
     </aside>
     <!-- /.aside -->
